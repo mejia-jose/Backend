@@ -51,24 +51,20 @@ class CategoriesController extends Controller
     {
         try 
         {
+            
             if($idCategory > 0)
             {
                 $categories = Category::find($idCategory);
-            }else
-            {
+                return (!$categories) ? response()->json(['message' => "No se encontró la categoría con el ID especificado."], 404):
+                response()->json(['categories' => $categories], 200);
+                
+            } else {
                 $categories = Category::all();
-                return response()->json(['categories' => $categories], 200);
+                $count = $categories->count();
+                return ($count > 0) ? response()->json(['categories' => $categories], 200) :
+                response()->json(['message' => "No se encontraron categorías, por favor ingresa una nueva."], 200);
             }
-
-            $count = $categories->count();
-            if($count > 0)
-            {
-                return response()->json(['categories' => $categories], 200);
-            }else
-            {
-                return response()->json(['message' => "No se encontraron categorías, por favor ingresa una nueva."], 200);
-            }
-        
+            
         } catch (\Exception $e)
         {
         return response()->json(['message' => 'Ha ocurrido un error al obtener las categorías', 'error' => $e->getMessage()], 500);
