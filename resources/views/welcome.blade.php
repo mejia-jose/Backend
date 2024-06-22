@@ -873,6 +873,24 @@
 
                 <h2><strong>Endpoints Disponibles:</strong></h2>
 
+                <h3><strong>Usuarios</strong></h3>
+
+                <div class="endpoint">
+                    <h3><strong>Registrar un usuario</strong></h3>
+                    <p><strong>URL:</strong> <code>/api/register-user</code></p>
+                    <p><strong>Método:</strong> <code>POST</code></p>
+                    <p><strong>Descripción:</strong> Permite registrar una nuevo usuario.</p>
+                    <p><strong>Cuerpo de la solicitud:</strong></p>
+                    <pre>
+                    {
+    "name":"JOSE MEJIA MEJIA",
+    "email":"jmejia.jm@gmail.com",
+    "password":"12345678.",
+    "password_confirmation":"12345678."
+}
+                    </pre>
+                </div>
+
                 <h3><strong>Categorías</strong></h3>
 
                 <div class="endpoint">
@@ -1003,6 +1021,16 @@
                 Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
             </div>
         </div>
+    </div>
+
+    <div>
+        
+<iframe
+    allow="microphone;"
+    width="350"
+    height="430"
+    src="https://console.dialogflow.com/api-client/demo/embedded/083910f2-38a1-40ec-91b4-5c322485f40a">
+</iframe>
     </div>
     </div>
 </body>
