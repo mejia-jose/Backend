@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DialogFlowController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::post('/dialogflow-webhook', [DialogFlowController::class, 'webhook'])->name('dialogflow-webhook');
+
 
 Route::get('/', function () {
     return view('welcome');
