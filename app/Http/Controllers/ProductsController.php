@@ -76,7 +76,7 @@ class ProductsController extends Controller
             $count = $products->count();
             if($count > 0)
             {
-                return response()->json(['categories' => $products], 200);
+                return response()->json(['products' => $products], 200);
             }else
             {
                 return response()->json(['message' => "No se encontraron productos para esta categoría, por favor ingresa uno nuevo."], 200);
