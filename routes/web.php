@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DialogFlowController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +13,10 @@ use App\Http\Controllers\DialogFlowController;
 |
 */
 
-Route::post('/dialogflow-webhook', [DialogFlowController::class, 'webhook'])->name('dialogflow-webhook');
-
-
 Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/view', function () {
     return view('welcome');
 });
