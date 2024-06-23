@@ -1021,17 +1021,18 @@
                 Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
             </div>
         </div>
-    </div>
 
-    <div>
-        
-<iframe
-    allow="microphone;"
-    width="350"
-    height="430"
-    src="https://console.dialogflow.com/api-client/demo/embedded/083910f2-38a1-40ec-91b4-5c322485f40a">
-</iframe>
+        <div>
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="DialogFlowApiLaravel"
+  agent-id="083910f2-38a1-40ec-91b4-5c322485f40a"
+  language-code="es"
+></df-messenger>
+        </div>
     </div>
+    
     </div>
 </body>
 
